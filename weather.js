@@ -16,7 +16,7 @@ new Vue({
     },
     methods: {
         apiRequest: function(){
-            axios.get("http://api.openweathermap.org/data/2.5/weather?q=" + this.userInput + "&units=metric&appid=d9ce0e13783eb6a02995fab153ae9dc8")
+            axios.get("https://api.openweathermap.org/data/2.5/weather?q=" + this.userInput + "&units=metric&appid=d9ce0e13783eb6a02995fab153ae9dc8")
             .then((resp) => {
                 this.weather = resp.data.weather[0].description;
                 this.temperature = Math.round(resp.data.main.temp) + " C";
